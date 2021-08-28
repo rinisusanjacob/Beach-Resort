@@ -9,15 +9,15 @@ const getUnique = (items, value) => {
    
   };
 
-function RoomsFilter(rooms) {
+function RoomsFilter({rooms}) {
     const context=useContext(RoomContext);
     const{
         handleChange,type,capacity,price,minPrice,maxPrice,minSize,maxSize,breakfast,pets 
     }=context;
     let types = getUnique(rooms, "type");
-types=['all',...types];
- types=types.map((item,index)=>{
-     return <option value={item} key={index}>{item}</option>
+      types=['all',...types];
+      types=types.map((item,index)=>{
+      return <option value={item} key={index}>{item}</option>
  })
 
     return (
@@ -26,12 +26,15 @@ types=['all',...types];
             <form className="filter-form">
 
                 {/* select type*/ }
-                <div className="form-group">
+               <div className="form-group">
                     <label htmlFor="type"> room type</label>
-                    <select name="type" id="type" value={type} className="form-control" onChange={handleChange}></select>
-                {types}
+                    <select name="type" id="type" 
+                    value={type} 
+                    className="form-control" 
+                    onChange={handleChange}>{types}</select>
+                
                 </div>
-                {/* end select type*/ }
+               {/* end select type*/ }
             </form>
 
         </section>
