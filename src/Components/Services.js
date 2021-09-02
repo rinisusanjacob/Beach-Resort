@@ -7,29 +7,29 @@ export default class Services extends Component {
         services:[
             {
                 icon:<FaCocktail/>,
-                title:"free cocktails",
-                info:'Info........'
+                title:"FREE COCKTAILS",
+                info:''
             },
             {
                 icon:<FaHiking/>,
-                title:"endless hiking",
-                info:'Info........'
+                title:"ENDLESS HIKING",
+                info:''
             },
             {
                 icon:<FaShuttleVan/>,
-                title:"free shuttle",
-                info:'Info......'
+                title:"FREE SHUTTLE",
+                info:''
             },
             {
                 icon:<FaBeer/>,
-                title:"Strongest Beer",
-                info:'Info........'
+                title:"STRONGEST BEER",
+                info:''
             }
         ]
     }
     render() {
         return (
-            <section className="services">
+            <section id="services" className="services">
                 <Title title="services"/>
                 <div className="services-center">
                     {this.state.services.map((item,index)=>{

@@ -89,12 +89,18 @@ h6 {
 /* end of globals */
 /* Navbar */
 .navbar {
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: var(--offWhite);
+ background: var(--offWhite);
+ /*background:snow;*/
+ /*background: transparent;*/
+ 
+ 
+
+  
   z-index: 1;
 }
 .nav-header {
@@ -133,11 +139,13 @@ h6 {
 }
 
 .show-nav {
-  height: 100px;
+  height: 104px;
 }
 @media screen and (min-width: 768px) {
+  
   .nav-btn {
     display: none;
+    
   }
   .nav-center {
     max-width: 1170px;
@@ -159,25 +167,41 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
-  display: flex;
+  /*background: url("./images/defaultBcg.jpeg") center/cover no-repeat;*/
+  /*background: url("https://suitcasestories.com/wp-content/uploads/2013/11/Top-5-Luxury-Beach-Resorts-in-Turkey-Calista-Luxury-Resort.jpg") center/cover no-repeat;
+  */display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -4rem;
+  height: 37rem;
+  background: cover;
+  
+  
+}
+@media screen and (max-width: 992px) {
+  .defaultHero{
+    height: 20rem;
+  }
 }
 .roomsHero {
   background-image: url("./images/room-2.jpeg");
   min-height: 60vh;
 }
+
+
 /* End of Hero */
 /* Banner */
 .banner {
   display: inline-block;
   background: rgba(0, 0, 0, 0.5);
+
+  
   color: var(--mainWhite);
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
+  
 }
 .banner h1 {
   font-size: 2.5rem;
@@ -233,7 +257,8 @@ h6 {
   padding: 5rem 0;
 }
 .services {
-  background: var(--darkGrey);
+  /*background: var(--darkGrey);*/
+  background:rgb(236, 233, 233);
   text-align: center;
 }
 .services-center {
@@ -252,6 +277,7 @@ h6 {
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
 }
 .services p {
   width: 80%;
@@ -511,3 +537,82 @@ h6 {
   }
 }
 /* end of rooms fitler*/
+@media screen and (min-width: 768px) {
+.b1{
+  /*background-color:#ece7df;
+ 
+  border-radius: 0.85rem;
+  border:0em;
+ 
+  font-size: 1.05rem;
+   padding: 0.350rem 1.45rem;
+  margin-top: -0.4rem;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-weight: bolder;*/
+
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+  /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+  box-shadow: var(--lightShadow);
+  font-weight: bolder;
+
+}
+.b1:hover{
+  /*background: rgba(0, 0, 0, 0.5);
+  color:#fff;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
+
+
+
+  background: rgb(199, 194, 181);
+  color: var(--primaryColor);
+ /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
+ box-shadow: var(--darkShadow);
+  font-weight: bolder;
+
+}
+}
+.b1{
+ /* background-color:transparent;*/
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+  border:none;
+  font-weight: bold;
+  padding-top: -2rem;
+  padding-bottom: -2rem;
+
+}
+.carousel{
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  height: 100%;
+  width: 100%;
+  
+}
+
+
+
+
+.Simg{
+  position: cover;
+  justify-content: fill;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+

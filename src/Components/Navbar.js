@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import logo from '../images/logo.svg';
-import {FaAlignRight} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import {FaAlignRight, FaWindows} from 'react-icons/fa';
+import { Link} from 'react-router-dom';
+
+
 import '../App.css'
 
+
+
 export default class Navbar extends Component {
+
+  
+    
     state={
         isOpen:false
     }
@@ -13,9 +20,13 @@ export default class Navbar extends Component {
     }
 
     
-    render() {
+  render() {
+   
+
         return (
-            <nav  className="navbar">
+            
+         
+            <div  className="navbar">
                 
                 <div className="nav-center">
                    < div className="nav-header">
@@ -30,14 +41,21 @@ export default class Navbar extends Component {
                    </div>
                    <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
                        <li>
-                           <Link to="/">Home</Link>
+                            <Link to="/">
+                          <button  className="b1" type='button'>Home</button></Link>
                        </li>
                        <li>
-                           <Link to="/rooms">Rooms</Link>
+                           <Link to="/rooms"><button   className="b1" type='button'>Rooms</button></Link>
                        </li>
+                       
+                       
+                      
+                      
                    </ul>
+                  
                 </div>
-            </nav>
+            </div>
+            
         )
     }
 }
